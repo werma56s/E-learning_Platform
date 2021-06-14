@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELearningPlatform", "ELearningPlatform\ELearningPlatform.csproj", "{4BADFA3E-4155-47FF-ADD6-CCE3EA32BB0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestELearningPlatform", "TestELearningPlatform\TestELearningPlatform.csproj", "{731FFBAC-CD0C-4862-BAF8-12499EAE16A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BADFA3E-4155-47FF-ADD6-CCE3EA32BB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BADFA3E-4155-47FF-ADD6-CCE3EA32BB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BADFA3E-4155-47FF-ADD6-CCE3EA32BB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BADFA3E-4155-47FF-ADD6-CCE3EA32BB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731FFBAC-CD0C-4862-BAF8-12499EAE16A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731FFBAC-CD0C-4862-BAF8-12499EAE16A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731FFBAC-CD0C-4862-BAF8-12499EAE16A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731FFBAC-CD0C-4862-BAF8-12499EAE16A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DB3F918-554C-426D-95AD-597D58135A6E}
+	EndGlobalSection
+EndGlobal
