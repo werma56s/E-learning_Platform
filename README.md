@@ -1,6 +1,6 @@
 # E-learning_Platform
 
-NuGet:
+NuGet:<br/>
 CefSharp.WinForms.NETCore - 90.06.50 <br/>
 chromiumembeddedframework.runtime.win-x64 - 90.06.50<br/>
 chromiumembeddedframework.runtime.win-x86 - 90.06.50<br/>
