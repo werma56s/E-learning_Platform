@@ -11,25 +11,25 @@ namespace TestELearningPlatform
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethodCheckPassword()
+        public void TestMethodCheckCorrectPasswordInTermsOfSecurity()
         {
             string textToCheck = "P@ssw0rd";
             bool actualResult = ELearningPlatform.SecurityPassword.CheckPassword(textToCheck);
             bool expectedResult = true;
 
-            Assert.AreEqual(expectedResult, actualResult, "Text not correctly");
+            Assert.AreEqual(expectedResult, actualResult, "Password not correctly - haven't needed items - lower case letter, upper case lette, one numeric value, one special case characters, minimum length 7");
         }
         [TestMethod]
-        public void TestMethodCheckPassword2()
+        public void TestMethodCheckFailedPasswordInTermsOfSecurity()
         {
             string textToCheck = "toptop123";
             bool actualResult = ELearningPlatform.SecurityPassword.CheckPassword(textToCheck);
             bool expectedResult = false;
 
-            Assert.AreEqual(expectedResult, actualResult, "Text correctly");
+            Assert.AreEqual(expectedResult, actualResult, "Password correct - have all needed items - lower case letter, upper case lette, one numeric value, one special case characters, minimum length 7");
         }
         [TestMethod]
-        public void TestMethodCheckLogin()
+        public void TestMethodCheckLoginWhetherExistInDatabase()
         {
             string loginToCheck = "user12";
             bool actualResult = ELearningPlatform.Register.CheckLogin(loginToCheck);
@@ -38,7 +38,7 @@ namespace TestELearningPlatform
             Assert.AreEqual(expectedResult, actualResult, "Login not egxist in database");
         }
         [TestMethod]
-        public void TestMethodCheckLogin2()
+        public void TestMethodCheckLoginWhetherNotExistInDatabase()
         {
             string loginToCheck = "user1";
             bool actualResult = ELearningPlatform.Register.CheckLogin(loginToCheck);
@@ -47,7 +47,7 @@ namespace TestELearningPlatform
             Assert.AreEqual(expectedResult, actualResult, "Login is egxist in database");
         }
         [TestMethod]
-        public void TestMethodSHA256Chack()
+        public void TestMethodCheckSHA256()
         {
             string source = "toptop123";
             string hash;
@@ -62,7 +62,7 @@ namespace TestELearningPlatform
             Assert.AreEqual(expectedResult, actualResult, "Wrong hash");
         }
         [TestMethod]
-        public void TestMethodChackUser()
+        public void TestMethodCheckUserWhenExistInDatabase()
         {
             string login = "user1", password = "user1Q!@";
             bool actualResult = ELearningPlatform.Login.CheckUser(login, password);
@@ -70,12 +70,12 @@ namespace TestELearningPlatform
             Assert.AreEqual(expectedResult, actualResult, "This data not exist in database");
         }
         [TestMethod]
-        public void TestMethodChackUser2()
+        public void TestMethodCheckUserWhenUserNotExistInDatabase()
         {
             string login = "user2", password = "user2Q!";
             bool actualResult = ELearningPlatform.Login.CheckUser(login, password);
             bool expectedResult = false;
-            Assert.AreEqual(expectedResult, actualResult, "This data not exist in database");
+            Assert.AreEqual(expectedResult, actualResult, "This data exist in database");
         }
 
         [TestMethod]
@@ -87,7 +87,7 @@ namespace TestELearningPlatform
             Assert.AreEqual(expectedResult, actualResult, "Wrong Role data");
         }
         [TestMethod]
-        public void TestMethodGetRole2()
+        public void TestMethodGetRoleFromNotExistingUser()
         {
             string login = "user20", password = "user20Q!@"; //not exist this user
             int actualResult = ELearningPlatform.Login.GetRole(login, password);
@@ -96,13 +96,13 @@ namespace TestELearningPlatform
         }
 
         [TestMethod]
-        public void Check_internet_connetion()
+        public void CheckInternetConnetion()
         {
 
             bool actualResult = History.CheckConnectionIntenet();
             bool expectedResult = true;
 
-            Assert.AreEqual(expectedResult, actualResult, "you don't have intenet connetion");
+            Assert.AreEqual(expectedResult, actualResult, "you don't have internet connection");
         }
     }
 }
